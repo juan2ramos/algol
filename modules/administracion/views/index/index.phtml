@@ -1,0 +1,23 @@
+<section id="inicio" >
+
+    <h1>Iniciar Sesi&oacute;n</h1>
+    <?php if (isset($this->_error)): ?>
+        <div id="error"><?php echo $this->_error; ?></div>
+    <?php endif; ?>
+
+    <form name="form1" method="post" action="">
+        <label id="errorGeneral">
+           
+        </label>
+        <input type="hidden" value="1" name="enviar" />
+        <label id="nombreusuario">
+            <input type="text" name="nombreusuario" value="<?php if (isset($this->datos)) echo $this->datos['nombreusuario']; ?>" placeholder="Ingrese el usuario" />
+
+        </label>
+        <label id="contrasenia">
+            <input type="password" name="contrasenia" placeholder="Ingrese el password"/>
+        </label>
+        <input type="submit" value="Iniciar sesi&oacute;n" id="button" />
+        <p>Olvidaste la contrase&ntilde;a? ayuda</p>   
+    </form>
+</section>
